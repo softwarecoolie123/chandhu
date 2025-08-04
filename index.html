@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Update</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Photo with Blur -->
+    <div class="background-photo"></div>
+    
+    <!-- COVER PAGE - Gentle Trick -->
+    <div id="cover-page">
+        <div class="gentle-system">
+            <div class="system-header">
+                <div class="system-logo">
+                    <i class="fas fa-heart"></i>
+                    <span>System Care</span>
+                </div>
+                <div class="system-time" id="system-time"></div>
+            </div>
+            
+            <div class="system-content">
+                <div class="gentle-notice">
+                    <i class="fas fa-star"></i>
+                    <h2>System Update Available</h2>
+                    <p>Your life has a special update waiting for you.</p>
+                    <div class="gentle-progress">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <p class="status-text">Preparing something special...chalooooo</p>
+                </div>
+                
+                <div class="gentle-options">
+                    <button class="gentle-btn" onclick="showGentleMessage()">
+                        <i class="fas fa-clock"></i> Maybe Later
+                    </button>
+                    <button class="gentle-btn primary" onclick="proceedToBirthday()">
+                        <i class="fas fa-heart"></i> Continue
+                    </button>
+                </div>
+                
+                <div class="gentle-notifications">
+                    <div class="notification">
+                        <i class="fas fa-sparkles"></i>
+                        <span>Something magical is waiting...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN BIRTHDAY WEBSITE -->
+    <div id="main-website" class="hidden">
+        <!-- Floating Hearts Background -->
+        <div id="floating-hearts"></div>
+        
+        <!-- Loading Screen -->
+        <div id="loading-screen">
+            <div class="gentle-loader">
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+            </div>
+            <p>what's coming...</p>
+        </div>
+
+        <!-- Main Content -->
+        <div id="main-content" class="hidden">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <div class="container">
+                    <div class="welcome-content">
+                        <div class="welcome-text">
+                            <h1 class="gentle-title">Hi Chandini!</h1>
+                            <div class="typing-text">
+                                <span id="typing-text"></span>
+                                <span class="cursor">|</span>
+                            </div>
+                        </div>
+                        <div class="floating-rose">
+                            <i class="fas fa-rose"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Birthday Reveal Section -->
+            <section class="birthday-reveal-section">
+                <div class="container">
+                    <div class="reveal-card">
+                        <div class="card-content">
+                            <div class="birthday-icon">
+                                <i class="fas fa-birthday-cake"></i>
+                            </div>
+                            <h2 class="reveal-title">Happy B'day Chandu...</h2>
+                            <p class="reveal-text">Today is a very special day, The day when a creature like you was born...</p>
+                            <button class="reveal-btn" onclick="revealNext()">
+                                <i class="fas fa-heart"></i> go ahead!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Special Message Section -->
+            <section class="message-section hidden-section">
+                <div class="container">
+                    <div class="message-card">
+                        <div class="message-header">
+                            <i class="fas fa-envelope"></i>
+                            <h2>A letter for you</h2>
+                        </div>
+                        <div class="message-content">
+                            <p>Hey Chandu,</p>
+                            <p>On your special day, I wanted to tell you how much you mean to me. Your smile brightens my world, your laughter is music to my ears, and your presence makes every moment magical.</p>
+                            <p>You deserve all the love, joy, and happiness that life has to offer. May this year bring you countless reasons to smile and endless moments of pure joy.</p>
+                            <p>idhantha nenu cheppanu, but life anedhi chala boring untundhi neelanti vallu lekapothe. live longer and stay happy...  🌸🌸</p>
+                            <p>nee gurunchi ippudu indhulo cheppalante page saripodhemo.. </p>
+                        </div>
+                        <button class="message-btn" onclick="revealNext()">
+                            <i class="fas fa-arrow-right"></i> Next
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Photo Gallery Section -->
+            <section class="gallery-section hidden-section">
+                <div class="container">
+                    <div class="gallery-header">
+                        <i class="fas fa-images"></i>
+                        <h2>tottodoyyy</h2>
+                        <p>We have no pics of us together, but we will make some soon...</p>
+                    </div>
+                    <div class="photo-gallery">
+                        <div class="photo-item" data-photo="1">
+                            <div class="photo-cover">
+                                <i class="fas fa-heart"></i>
+                                <span><a href="/new/images/photo1.mp4" >funny</a></span>
+                            </div>
+                        </div>
+                        <div class="photo-item" data-photo="2">
+                            <div class="photo-cover">
+                                <i class="fas fa-star"></i>
+                                <span><a href="/new/images/photo2.mp4" >lovely</a></span>
+                            </div>
+                        </div>
+                        
+                        <div class="photo-item" data-photo="3">
+                            <div class="photo-cover">
+                                <i class="fas fa-rose"></i>
+                                
+                                <span><a href="/new/images/photo3.mp4" >cutie</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="gallery-btn" onclick="revealNext()">
+                        <i class="fas fa-arrow-right"></i> Chaloo
+                    </button>
+                </div>
+            </section>
+
+            <!-- Video Section -->
+            <section class="video-section hidden-section">
+                <div class="container">
+                    <div class="video-card">
+                        <div class="video-header">
+                            <i class="fas fa-video"></i>
+                            <h2>A video for you</h2>
+                        </div>
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <p><a href="https://www.youtube.com/watch?v=CZ9WIZxhodo&list=RDCZ9WIZxhodo&start_radio=1">hahahaa</a></p>
+                        </div>
+                        <button class="video-continue-btn" onclick="revealNext()">
+                            <i class="fas fa-arrow-right"></i> Next what?
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interactive Surprises Section -->
+            <section class="surprises-section hidden-section">
+                <div class="container">
+                    <div class="surprises-header">
+                        <i class="fas fa-gift"></i>
+                        <h2>for uhhhhh</h2>
+                        <p>something special...</p>
+                    </div>
+                    <div class="surprises-grid">
+                        <div class="surprise-item" data-surprise="1">
+                            <div class="surprise-cover">
+                                <i class="fas fa-heart"></i>
+                                <span>🌸</span>
+                            </div>
+                        </div>
+                        <div class="surprise-item" data-surprise="2">
+                            <div class="surprise-cover">
+                                <i class="fas fa-star"></i>
+                                <span>🌸</span>
+                            </div>
+                        </div>
+                        
+                        <div class="surprise-item" data-surprise="4">
+                            <div class="surprise-cover">
+                                <i class="fas fa-seedling"></i>
+                                <span>🌸</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Final One Button -->
+                    <div style="text-align: center; margin-top: 30px;">
+                        <button onclick="revealNext()" class="final-one-btn">
+                            <i class="fas fa-heart"></i> One last msg..
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final Message Section -->
+            <section class="final-section hidden-section">
+                <div class="container">
+                    <div class="final-card">
+                        <div class="final-content">
+                            <i class="fas fa-heart"></i>
+                            <h2>Happy Birthday!</h2>
+                            <p>Thank you for being you. You make the world a more beautiful place just by being in it.</p>
+                            <p>May your day be filled with love, laughter, and all the happiness you deserve.</p>
+                            <div class="final-hearts">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="signature">
+                                <p>With love,</p>
+                                <h3>Tejaa</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modal for Content -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="modal-body"></div>
+                </div>
+            </div>
+
+            <!-- Confetti Container -->
+            <div id="confetti-container"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html> 
